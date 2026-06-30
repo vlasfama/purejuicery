@@ -26,12 +26,13 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- decorative gradient mesh, fixed behind everything -->
+<!-- decorative gradient mesh + grain, fixed behind/above everything -->
 <div class="mesh" aria-hidden="true">
   <span class="mesh__blob mesh__blob--1"></span>
   <span class="mesh__blob mesh__blob--2"></span>
   <span class="mesh__blob mesh__blob--3"></span>
 </div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
@@ -63,6 +64,12 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
+  <img
+    class="hero__bg"
+    src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?fm=jpg&q=70&w=2000&auto=format&fit=crop"
+    alt=""
+    aria-hidden="true"
+  />
   <div class="hero__grid">
     <div class="hero__copy reveal">
       <p class="eyebrow"><span class="dot"></span>100% Organic · Zero Filler</p>
@@ -118,6 +125,13 @@
 
 <!-- ===== INTRO / PHILOSOPHY ===== -->
 <section class="philosophy" id="promise">
+  <img
+    class="philosophy__bg"
+    src="https://images.unsplash.com/photo-1566305977571-5666677c6e98?fm=jpg&q=70&w=2000&auto=format&fit=crop"
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+  />
   <p class="eyebrow reveal centered"><span class="dot"></span>Our Promise</p>
   <h2 class="philosophy__statement reveal">
     We don't make juice taste natural.
@@ -174,7 +188,7 @@
 
     <!-- Beetroot -->
     <article class="juice-card juice-card--beet reveal">
-      <img src="https://images.unsplash.com/photo-1551040096-5f4aec6ca12b?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Red beetroot beverage in mason jars" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1500291161618-747dee2ab16c?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Deep red beetroot juice in a clear glass" loading="lazy" />
       <div class="juice-card__scrim"></div>
       <div class="juice-card__top">
         <span class="juice-card__index">03</span>
@@ -228,8 +242,8 @@
       <figcaption>Fresh, always</figcaption>
     </figure>
     <figure class="strip__item reveal">
-      <img src="https://images.unsplash.com/photo-1619241638225-14d56e47ae64?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Sliced orange on bold background" loading="lazy" />
-      <figcaption>Orange</figcaption>
+      <img src="https://images.unsplash.com/photo-1551040078-5a2f375f9549?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Cold-pressed juice in mason jars" loading="lazy" />
+      <figcaption>Cold-pressed</figcaption>
     </figure>
     <figure class="strip__item reveal">
       <img src="https://images.unsplash.com/photo-1583525999977-2b928def9ab6?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Green juice in a clear glass" loading="lazy" />
@@ -245,31 +259,50 @@
     <h2 class="reveal">The label is the recipe.</h2>
   </div>
   <div class="why__grid">
-    <div class="why__card reveal">
-      <span class="why__icon">🌱</span>
-      <h3>100% Organic</h3>
-      <p>Every carrot, beetroot and citrus is grown without synthetic pesticides — what's not sprayed on doesn't end up in your glass.</p>
+    <div class="why__card why__card--organic reveal">
+      <img src="https://images.unsplash.com/photo-1741517802684-ba07c444a5d2?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
+      <div class="why__card-content">
+        <span class="why__icon">🌱</span>
+        <h3>100% Organic</h3>
+        <p>Every carrot, beetroot and citrus is grown without synthetic pesticides — what's not sprayed on doesn't end up in your glass.</p>
+      </div>
     </div>
-    <div class="why__card reveal">
-      <span class="why__icon">🍯</span>
-      <h3>No Sugar Added</h3>
-      <p>Sweetness comes from the apple and orange in the blend, never a syrup. If it's sweet, it's because the fruit was.</p>
+    <div class="why__card why__card--sugar reveal">
+      <img src="https://images.unsplash.com/photo-1618724980108-a4d3856fd8f5?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
+      <div class="why__card-content">
+        <span class="why__icon">🍯</span>
+        <h3>No Sugar Added</h3>
+        <p>Sweetness comes from the apple and orange in the blend, never a syrup. If it's sweet, it's because the fruit was.</p>
+      </div>
     </div>
-    <div class="why__card reveal">
-      <span class="why__icon">💧</span>
-      <h3>No Water Added</h3>
-      <p>We don't stretch the yield. Every bottle is full-strength juice, pressed straight from the produce.</p>
+    <div class="why__card why__card--water reveal">
+      <img src="https://images.unsplash.com/photo-1583525999977-2b928def9ab6?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
+      <div class="why__card-content">
+        <span class="why__icon">💧</span>
+        <h3>No Water Added</h3>
+        <p>We don't stretch the yield. Every bottle is full-strength juice, pressed straight from the produce.</p>
+      </div>
     </div>
-    <div class="why__card reveal">
-      <span class="why__icon">🧪</span>
-      <h3>No Preservatives</h3>
-      <p>Nothing artificial fakes a longer shelf life. We make less, more often, and keep it cold.</p>
+    <div class="why__card why__card--preservative reveal">
+      <img src="https://images.unsplash.com/photo-1534531173927-aeb928d54385?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
+      <div class="why__card-content">
+        <span class="why__icon">🧪</span>
+        <h3>No Preservatives</h3>
+        <p>Nothing artificial fakes a longer shelf life. We make less, more often, and keep it cold.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ===== CTA / ORDER ===== -->
 <section class="order" id="order">
+  <img
+    class="order__bg"
+    src="https://images.unsplash.com/photo-1500291161618-747dee2ab16c?fm=jpg&q=70&w=2000&auto=format&fit=crop"
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+  />
   <div class="order__inner reveal">
     <p class="eyebrow centered"><span class="dot"></span>Ready when you are</p>
     <h2>Taste what<br /><span class="grad-text">nothing added</span><br />makes possible.</h2>

@@ -106,6 +106,17 @@ a { color: inherit; text-decoration: none; }
 
 main, .nav, .footer { position: relative; z-index: 1; }
 
+/* film-grain texture, sits above everything for a premium printed feel */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 /* =========================================================
    Reveal-on-scroll
    ========================================================= */
@@ -319,7 +330,26 @@ main, .nav, .footer { position: relative; z-index: 1; }
   margin: 0 auto;
 }
 
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.16;
+  filter: grayscale(0.3) blur(1px);
+  mix-blend-mode: luminosity;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 85%);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 85%);
+  z-index: 0;
+}
+
 .hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 48px;
@@ -457,10 +487,24 @@ main, .nav, .footer { position: relative; z-index: 1; }
    ========================================================= */
 
 .philosophy {
+  position: relative;
   max-width: 880px;
   margin: 0 auto;
   padding: 140px 24px;
   text-align: center;
+  overflow: hidden;
+}
+.philosophy__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.14;
+  filter: grayscale(1) contrast(1.1);
+  z-index: -1;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at center, black 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse 70% 60% at center, black 30%, transparent 80%);
 }
 .philosophy__statement {
   font-family: var(--font-display);
@@ -661,21 +705,46 @@ main, .nav, .footer { position: relative; z-index: 1; }
   gap: 20px;
 }
 .why__card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 22px;
-  padding: 32px 26px;
-  transition: background 0.35s ease, border-color 0.35s ease, transform 0.35s var(--ease);
+  overflow: hidden;
+  min-height: 290px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.35s var(--ease), border-color 0.35s ease;
 }
-.why__card:hover {
-  background: var(--surface-2);
-  border-color: rgba(255,255,255,0.18);
-  transform: translateY(-4px);
+.why__card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+
+.why__card img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(1.15) grayscale(0.1);
+  transition: transform 0.8s var(--ease);
 }
+.why__card:hover img { transform: scale(1.06); }
+
+.why__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(195deg, rgba(8,9,10,0.18) 0%, rgba(8,9,10,0.86) 65%, rgba(8,9,10,0.97) 100%);
+}
+
+.why__card-content {
+  position: relative;
+  z-index: 1;
+  padding: 28px 26px;
+}
+
 .why__icon {
   font-size: 1.6rem;
   display: inline-flex;
   margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
 }
 .why__card h3 {
   font-family: var(--font-display);
@@ -683,11 +752,12 @@ main, .nav, .footer { position: relative; z-index: 1; }
   font-weight: 600;
   margin: 0 0 12px;
   letter-spacing: -0.01em;
+  color: #fff;
 }
 .why__card p {
   font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--text-dim);
+  color: rgba(255,255,255,0.78);
   margin: 0;
 }
 
@@ -699,10 +769,25 @@ main, .nav, .footer { position: relative; z-index: 1; }
    ========================================================= */
 
 .order {
+  position: relative;
   padding: 140px 24px;
   border-top: 1px solid var(--line);
+  overflow: hidden;
+}
+.order__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: saturate(1.3) blur(2px);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
 }
 .order__inner {
+  position: relative;
+  z-index: 1;
   max-width: 620px;
   margin: 0 auto;
   text-align: center;
