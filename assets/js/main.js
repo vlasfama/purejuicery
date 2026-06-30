@@ -27,8 +27,22 @@
     })
   );
 
-  // Scroll-reveal
+  // Scroll-reveal — IntersectionObserver is the primary driver, but it can
+  // be throttled on backgrounded/inactive tabs, so a scroll/resize fallback
+  // guarantees content never gets stuck invisible.
   const revealEls = document.querySelectorAll(".reveal");
+  const isInViewport = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  };
+  const revealVisible = () => {
+    revealEls.forEach((el) => {
+      if (!el.classList.contains("is-visible") && isInViewport(el)) {
+        el.classList.add("is-visible");
+      }
+    });
+  };
+
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -42,9 +56,11 @@
       { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
+
+  revealVisible();
+  window.addEventListener("scroll", revealVisible, { passive: true });
+  window.addEventListener("resize", revealVisible);
 
   // Notify form (static site — no backend wired up yet)
   const form = document.getElementById("notifyForm");
