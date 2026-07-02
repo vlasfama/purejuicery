@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>purejuicery — Pure Juice. No Filler. No Compromise.</title>
+<title>purejuicery — The Organic Issue</title>
 <meta name="description" content="purejuicery makes 100% organic juice with no sugar, no water, no preservatives added. Retinol, Green, Beetroot & Pure Orange — pressed for real." />
-<meta name="theme-color" content="#08090a" />
+<meta name="theme-color" content="#f6f3ec" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="purejuicery — Pure Juice. No Filler. No Compromise." />
+<meta property="og:title" content="purejuicery — The Organic Issue" />
 <meta property="og:description" content="100% organic. No sugar. No water. No preservatives. Just fruit and roots, pressed." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://purejuicery.my" />
@@ -18,275 +18,272 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- decorative gradient mesh + grain, fixed behind/above everything -->
-<div class="mesh" aria-hidden="true">
-  <span class="mesh__blob mesh__blob--1"></span>
-  <span class="mesh__blob mesh__blob--2"></span>
-  <span class="mesh__blob mesh__blob--3"></span>
-</div>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ===== NAV ===== -->
+<!-- ===== MASTHEAD ===== -->
 <header class="nav" id="nav">
+  <div class="nav__meta">
+    <span>Vol. 01 — The Organic Issue</span>
+    <span class="nav__meta-right">Est. 2026 · purejuicery.my</span>
+  </div>
   <div class="nav__inner">
-    <a href="#top" class="nav__logo">
-      <span class="nav__mark" aria-hidden="true">🧃</span>
-      purejuicery
-    </a>
+    <a href="#top" class="nav__logo">purejuicery</a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="#juices">Juices</a>
-      <a href="#promise">Promise</a>
-      <a href="#ingredients">Ingredients</a>
-      <a href="#order">Order</a>
+      <a href="#juices"><span>01</span>Juices</a>
+      <a href="#promise"><span>02</span>Promise</a>
+      <a href="#ingredients"><span>03</span>Ingredients</a>
+      <a href="#order"><span>04</span>Order</a>
     </nav>
-    <a href="#order" class="btn btn--grad nav__cta">Get Pure</a>
+    <a href="#order" class="nav__cta">Order now →</a>
     <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav__mobile" id="navMobile">
-    <a href="#juices">Juices</a>
-    <a href="#promise">Promise</a>
-    <a href="#ingredients">Ingredients</a>
-    <a href="#order">Order</a>
+    <a href="#juices">01 — Juices</a>
+    <a href="#promise">02 — Promise</a>
+    <a href="#ingredients">03 — Ingredients</a>
+    <a href="#order">04 — Order</a>
   </div>
 </header>
 
 <main id="main">
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO / COVER ===== -->
 <section class="hero" id="top">
-  <img
-    class="hero__bg"
-    src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?fm=jpg&q=70&w=2000&auto=format&fit=crop"
-    alt=""
-    aria-hidden="true"
-  />
-  <div class="hero__grid">
-    <div class="hero__copy reveal">
-      <p class="eyebrow"><span class="dot"></span>100% Organic · Zero Filler</p>
-      <h1 class="hero__title">
-        Pure juice.<br />
-        <span class="grad-text">No filler.</span><br />
-        No compromise.
-      </h1>
-      <p class="hero__sub">
+  <p class="hero__kicker reveal">The Organic Issue — No Sugar. No Water. No Preservatives.</p>
+  <h1 class="hero__title reveal">
+    PURE<br />
+    JUICE<span class="hero__title-dot">.</span>
+  </h1>
+  <p class="hero__accent reveal">no filler, no compromise.</p>
+
+  <div class="hero__spread reveal">
+    <figure class="hero__figure">
+      <img
+        src="https://images.unsplash.com/photo-1619241638225-14d56e47ae64?fm=jpg&q=80&w=1600&auto=format&fit=crop"
+        alt="Fresh sliced orange on a bold yellow background"
+        fetchpriority="high"
+      />
+      <figcaption>Fig. 01 — Pure Orange, pressed same-day.</figcaption>
+    </figure>
+
+    <div class="hero__facts">
+      <p class="hero__dek">
         Four juices. Just fruit, vegetables and roots — never sugar,
         never water, never preservatives. purejuicery is what's left
         when you take nothing out and add nothing in.
       </p>
+      <dl class="fact-list">
+        <div><dt>Organic produce</dt><dd>100%</dd></div>
+        <div><dt>Added sugar</dt><dd>0 g</dd></div>
+        <div><dt>Water added</dt><dd>0%</dd></div>
+      </dl>
       <div class="hero__actions">
-        <a href="#juices" class="btn btn--grad">Explore the juices</a>
-        <a href="#promise" class="btn btn--outline">Our promise</a>
-      </div>
-      <div class="hero__stats">
-        <div><strong>100%</strong><span>Organic produce</span></div>
-        <div><strong>0g</strong><span>Added sugar</span></div>
-        <div><strong>0%</strong><span>Water added</span></div>
+        <a href="#juices" class="btn btn--ink">Explore the juices</a>
+        <a href="#promise" class="btn btn--line">Read the promise</a>
       </div>
     </div>
-
-    <div class="hero__visual reveal">
-      <div class="hero__card">
-        <img
-          src="https://images.unsplash.com/photo-1619241638225-14d56e47ae64?fm=jpg&q=80&w=1600&auto=format&fit=crop"
-          alt="Fresh sliced orange on a bold yellow background"
-          fetchpriority="high"
-        />
-        <div class="hero__card-tag">🍊 Pure Orange</div>
-      </div>
-      <div class="hero__glow"></div>
-    </div>
-  </div>
-
-  <div class="hero__scroll" aria-hidden="true">
-    <span></span>
-    <small>Scroll</small>
   </div>
 </section>
 
-<!-- ===== TRUST STRIP ===== -->
-<section class="trust" aria-label="Product guarantees">
-  <ul class="trust__list">
-    <li class="reveal">🌱 100% Organic</li>
-    <li class="reveal">🚫 No Sugar Added</li>
-    <li class="reveal">🚫 No Water Added</li>
-    <li class="reveal">🚫 No Preservatives</li>
-  </ul>
+<!-- ===== TICKER ===== -->
+<section class="ticker" aria-label="Product guarantees">
+  <div class="ticker__track">
+    <span>100% ORGANIC</span><span>—</span>
+    <span>NO SUGAR ADDED</span><span>—</span>
+    <span>NO WATER ADDED</span><span>—</span>
+    <span>NO PRESERVATIVES</span><span>—</span>
+    <span>100% ORGANIC</span><span>—</span>
+    <span>NO SUGAR ADDED</span><span>—</span>
+    <span>NO WATER ADDED</span><span>—</span>
+    <span>NO PRESERVATIVES</span><span>—</span>
+  </div>
 </section>
 
-<!-- ===== INTRO / PHILOSOPHY ===== -->
-<section class="philosophy" id="promise">
-  <img
-    class="philosophy__bg"
-    src="https://images.unsplash.com/photo-1566305977571-5666677c6e98?fm=jpg&q=70&w=2000&auto=format&fit=crop"
-    alt=""
-    aria-hidden="true"
-    loading="lazy"
-  />
-  <p class="eyebrow reveal centered"><span class="dot"></span>Our Promise</p>
-  <h2 class="philosophy__statement reveal">
-    We don't make juice taste natural.
-    <span class="grad-text-alt">We just don't take the natural part out.</span>
-  </h2>
-  <p class="philosophy__sub reveal">
-    Every bottle starts and ends with one ingredient list: fruit, vegetables,
-    and roots. No syrup to round out the sour. No water to stretch the yield.
-    No preservatives to fake a longer shelf life.
-  </p>
+<!-- ===== PROMISE / PULL QUOTE ===== -->
+<section class="promise" id="promise">
+  <p class="running-head reveal"><span>02</span> Our Promise</p>
+  <blockquote class="promise__quote reveal">
+    <span class="promise__mark" aria-hidden="true">&ldquo;</span>
+    We don't make juice taste natural. We just don't take the
+    natural part out.
+  </blockquote>
+  <div class="promise__body reveal">
+    <p class="dropcap">
+      Every bottle starts and ends with one ingredient list: fruit,
+      vegetables, and roots. No syrup to round out the sour. No water
+      to stretch the yield. No preservatives to fake a longer shelf life.
+    </p>
+    <p>
+      What you taste is what grew in the ground — pressed, bottled,
+      and sent to you cold. Nothing between the farm and the glass
+      except the glass itself.
+    </p>
+  </div>
 </section>
 
-<!-- ===== JUICES — bento grid ===== -->
+<!-- ===== JUICES — feature spreads ===== -->
 <section class="juices" id="juices">
-  <div class="section-head">
-    <p class="eyebrow reveal centered"><span class="dot"></span>The Range</p>
-    <h2 class="reveal">Four juices. One standard.</h2>
-  </div>
+  <p class="running-head reveal"><span>01</span> The Lineup</p>
+  <h2 class="section-title reveal">Four juices.<br />One standard.</h2>
 
-  <div class="bento">
-    <!-- Retinol -->
-    <article class="juice-card juice-card--retinol reveal">
+  <!-- Retinol -->
+  <article class="feature reveal">
+    <span class="feature__num">01</span>
+    <figure class="feature__figure">
       <img src="https://images.unsplash.com/photo-1551040078-5a2f375f9549?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Fresh carrot juice in a glass jar" loading="lazy" />
-      <div class="juice-card__scrim"></div>
-      <div class="juice-card__top">
-        <span class="juice-card__index">01</span>
-        <span class="juice-card__pill">For the glow</span>
-      </div>
-      <div class="juice-card__body">
-        <h3>Retinol Juice</h3>
-        <p>Carrot, orange, lemon, ginger &amp; turmeric — skin-loving by nature, not by additive.</p>
-        <ul class="chips">
-          <li>🥕 Carrot</li><li>🍊 Orange</li><li>🍋 Lemon</li><li>🫚 Ginger</li><li>🫚 Turmeric</li>
-        </ul>
-      </div>
-    </article>
+      <figcaption>Fig. 02 — Retinol Juice, jarred.</figcaption>
+    </figure>
+    <div class="feature__copy">
+      <p class="feature__kicker">For the glow</p>
+      <h3>Retinol Juice</h3>
+      <p class="feature__desc">A bright, earthy press built on beta-carotene-rich carrot and sun-ripe orange, sharpened with lemon and warmed by ginger and turmeric.</p>
+      <table class="spec">
+        <tbody>
+          <tr><th>Carrot</th><td>🥕</td></tr>
+          <tr><th>Orange</th><td>🍊</td></tr>
+          <tr><th>Lemon</th><td>🍋</td></tr>
+          <tr><th>Ginger</th><td>🫚</td></tr>
+          <tr><th>Turmeric</th><td>🫚</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
 
-    <!-- Green -->
-    <article class="juice-card juice-card--green reveal">
+  <!-- Green -->
+  <article class="feature feature--reverse reveal">
+    <span class="feature__num">02</span>
+    <figure class="feature__figure">
       <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Fresh green juice in a glass with straw" loading="lazy" />
-      <div class="juice-card__scrim"></div>
-      <div class="juice-card__top">
-        <span class="juice-card__index">02</span>
-        <span class="juice-card__pill">Crisp &amp; clean</span>
-      </div>
-      <div class="juice-card__body">
-        <h3>Green Juice</h3>
-        <p>Green apple, cucumber, celery, lemon &amp; ginger. The one people actually feel.</p>
-        <ul class="chips">
-          <li>🍏 Green Apple</li><li>🍋 Lemon</li><li>🥒 Cucumber</li><li>🫚 Ginger</li><li>🌿 Celery</li>
-        </ul>
-      </div>
-    </article>
+      <figcaption>Fig. 03 — Green Juice, fresh cut.</figcaption>
+    </figure>
+    <div class="feature__copy">
+      <p class="feature__kicker">Crisp &amp; clean</p>
+      <h3>Green Juice</h3>
+      <p class="feature__desc">Green apple and cucumber keep it light and hydrating, celery and lemon bring the snap, and ginger lingers on the finish.</p>
+      <table class="spec">
+        <tbody>
+          <tr><th>Green Apple</th><td>🍏</td></tr>
+          <tr><th>Lemon</th><td>🍋</td></tr>
+          <tr><th>Cucumber</th><td>🥒</td></tr>
+          <tr><th>Ginger</th><td>🫚</td></tr>
+          <tr><th>Celery</th><td>🌿</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
 
-    <!-- Beetroot -->
-    <article class="juice-card juice-card--beet reveal">
+  <!-- Beetroot -->
+  <article class="feature reveal">
+    <span class="feature__num">03</span>
+    <figure class="feature__figure">
       <img src="https://images.unsplash.com/photo-1500291161618-747dee2ab16c?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Deep red beetroot juice in a clear glass" loading="lazy" />
-      <div class="juice-card__scrim"></div>
-      <div class="juice-card__top">
-        <span class="juice-card__index">03</span>
-        <span class="juice-card__pill">Bold colour</span>
-      </div>
-      <div class="juice-card__body">
-        <h3>Beetroot Juice</h3>
-        <p>Beetroot, red apple, carrot, orange, ginger &amp; lemon. Deep red, deeply unfiltered.</p>
-        <ul class="chips">
-          <li>🫜 Beetroot</li><li>🍎 Red Apple</li><li>🥕 Carrot</li><li>🍊 Orange</li><li>🫚 Ginger</li><li>🍋 Lemon</li>
-        </ul>
-      </div>
-    </article>
+      <figcaption>Fig. 04 — Beetroot Juice, unfiltered.</figcaption>
+    </figure>
+    <div class="feature__copy">
+      <p class="feature__kicker">Bold colour</p>
+      <h3>Beetroot Juice</h3>
+      <p class="feature__desc">Earthy beetroot meets the sweetness of red apple and carrot, rounded out by orange, lemon, and a clean hit of ginger.</p>
+      <table class="spec">
+        <tbody>
+          <tr><th>Beetroot</th><td>🫜</td></tr>
+          <tr><th>Red Apple</th><td>🍎</td></tr>
+          <tr><th>Carrot</th><td>🥕</td></tr>
+          <tr><th>Orange</th><td>🍊</td></tr>
+          <tr><th>Ginger</th><td>🫚</td></tr>
+          <tr><th>Lemon</th><td>🍋</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
 
-    <!-- Pure Orange -->
-    <article class="juice-card juice-card--orange reveal">
+  <!-- Pure Orange -->
+  <article class="feature feature--reverse reveal">
+    <span class="feature__num">04</span>
+    <figure class="feature__figure">
       <img src="https://images.unsplash.com/photo-1618724980108-a4d3856fd8f5?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Sliced orange fruit" loading="lazy" />
-      <div class="juice-card__scrim"></div>
-      <div class="juice-card__top">
-        <span class="juice-card__index">04</span>
-        <span class="juice-card__pill">One fruit</span>
-      </div>
-      <div class="juice-card__body">
-        <h3>Pure Orange Juice</h3>
-        <p>Just oranges, pressed. No water to thin it, no sugar to boost it.</p>
-        <ul class="chips">
-          <li>🍊 Orange</li>
-        </ul>
-      </div>
-    </article>
-  </div>
+      <figcaption>Fig. 05 — Pure Orange, one fruit.</figcaption>
+    </figure>
+    <div class="feature__copy">
+      <p class="feature__kicker">One fruit</p>
+      <h3>Pure Orange Juice</h3>
+      <p class="feature__desc">Just oranges, pressed. No water to thin it, no sugar to boost it — the way orange juice tasted before it came in a carton.</p>
+      <table class="spec">
+        <tbody>
+          <tr><th>Orange</th><td>🍊</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
 </section>
 
-<!-- ===== INGREDIENTS ===== -->
+<!-- ===== INGREDIENTS — contact sheet ===== -->
 <section class="ingredients" id="ingredients">
-  <div class="section-head">
-    <p class="eyebrow reveal centered"><span class="dot"></span>From the Ground Up</p>
-    <h2 class="reveal">Real ingredients. Nothing else.</h2>
-  </div>
-  <div class="strip">
-    <figure class="strip__item reveal">
+  <p class="running-head reveal"><span>03</span> From the Ground Up</p>
+  <h2 class="section-title reveal">Real ingredients.<br />Nothing else.</h2>
+
+  <div class="sheet">
+    <figure class="sheet__item reveal">
       <img src="https://images.unsplash.com/photo-1741517802684-ba07c444a5d2?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Fresh ginger root" loading="lazy" />
-      <figcaption>Ginger</figcaption>
+      <figcaption><span>IMG_01</span>Ginger</figcaption>
     </figure>
-    <figure class="strip__item reveal">
+    <figure class="sheet__item reveal">
       <img src="https://images.unsplash.com/photo-1534531173927-aeb928d54385?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Fresh lemon close up" loading="lazy" />
-      <figcaption>Lemon</figcaption>
+      <figcaption><span>IMG_02</span>Lemon</figcaption>
     </figure>
-    <figure class="strip__item reveal">
+    <figure class="sheet__item reveal">
       <img src="https://images.unsplash.com/photo-1576021182211-9ea8dced3690?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Variety of fresh fruit flat lay" loading="lazy" />
-      <figcaption>Fresh, always</figcaption>
+      <figcaption><span>IMG_03</span>Fresh, always</figcaption>
     </figure>
-    <figure class="strip__item reveal">
+    <figure class="sheet__item reveal">
       <img src="https://images.unsplash.com/photo-1551040078-5a2f375f9549?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Cold-pressed juice in mason jars" loading="lazy" />
-      <figcaption>Cold-pressed</figcaption>
+      <figcaption><span>IMG_04</span>Cold-pressed</figcaption>
     </figure>
-    <figure class="strip__item reveal">
+    <figure class="sheet__item reveal">
       <img src="https://images.unsplash.com/photo-1583525999977-2b928def9ab6?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Green juice in a clear glass" loading="lazy" />
-      <figcaption>Pressed daily</figcaption>
+      <figcaption><span>IMG_05</span>Pressed daily</figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ===== WHY US ===== -->
-<section class="why">
-  <div class="section-head">
-    <p class="eyebrow reveal centered"><span class="dot"></span>Why purejuicery</p>
-    <h2 class="reveal">The label is the recipe.</h2>
-  </div>
-  <div class="why__grid">
-    <div class="why__card why__card--organic reveal">
-      <img src="https://images.unsplash.com/photo-1741517802684-ba07c444a5d2?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
-      <div class="why__card-content">
-        <span class="why__icon">🌱</span>
+<!-- ===== WHY US — field notes ===== -->
+<section class="notes">
+  <p class="running-head reveal"><span>04</span> Field Notes</p>
+  <h2 class="section-title reveal">The label<br />is the recipe.</h2>
+
+  <div class="notes__list">
+    <div class="note reveal">
+      <span class="note__num">01</span>
+      <div>
         <h3>100% Organic</h3>
         <p>Every carrot, beetroot and citrus is grown without synthetic pesticides — what's not sprayed on doesn't end up in your glass.</p>
       </div>
     </div>
-    <div class="why__card why__card--sugar reveal">
-      <img src="https://images.unsplash.com/photo-1618724980108-a4d3856fd8f5?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
-      <div class="why__card-content">
-        <span class="why__icon">🍯</span>
+    <div class="note reveal">
+      <span class="note__num">02</span>
+      <div>
         <h3>No Sugar Added</h3>
         <p>Sweetness comes from the apple and orange in the blend, never a syrup. If it's sweet, it's because the fruit was.</p>
       </div>
     </div>
-    <div class="why__card why__card--water reveal">
-      <img src="https://images.unsplash.com/photo-1583525999977-2b928def9ab6?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
-      <div class="why__card-content">
-        <span class="why__icon">💧</span>
+    <div class="note reveal">
+      <span class="note__num">03</span>
+      <div>
         <h3>No Water Added</h3>
         <p>We don't stretch the yield. Every bottle is full-strength juice, pressed straight from the produce.</p>
       </div>
     </div>
-    <div class="why__card why__card--preservative reveal">
-      <img src="https://images.unsplash.com/photo-1534531173927-aeb928d54385?fm=jpg&q=70&w=900&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" />
-      <div class="why__card-content">
-        <span class="why__icon">🧪</span>
+    <div class="note reveal">
+      <span class="note__num">04</span>
+      <div>
         <h3>No Preservatives</h3>
         <p>Nothing artificial fakes a longer shelf life. We make less, more often, and keep it cold.</p>
       </div>
@@ -294,18 +291,11 @@
   </div>
 </section>
 
-<!-- ===== CTA / ORDER ===== -->
+<!-- ===== ORDER — subscribe card ===== -->
 <section class="order" id="order">
-  <img
-    class="order__bg"
-    src="https://images.unsplash.com/photo-1500291161618-747dee2ab16c?fm=jpg&q=70&w=2000&auto=format&fit=crop"
-    alt=""
-    aria-hidden="true"
-    loading="lazy"
-  />
-  <div class="order__inner reveal">
-    <p class="eyebrow centered"><span class="dot"></span>Ready when you are</p>
-    <h2>Taste what<br /><span class="grad-text">nothing added</span><br />makes possible.</h2>
+  <div class="order__card reveal">
+    <p class="running-head running-head--light"><span>05</span> Ready When You Are</p>
+    <h2>Taste what<br /><em>nothing added</em><br />makes possible.</h2>
     <p class="order__sub">
       purejuicery is launching fresh, local batches. Leave your email and
       we'll let you know the moment your bottle is ready.
@@ -314,7 +304,7 @@
     <form class="order__form" id="notifyForm">
       <label class="sr-only" for="email">Email address</label>
       <input type="email" id="email" name="email" placeholder="you@email.com" required />
-      <button type="submit" class="btn btn--grad">Notify Me</button>
+      <button type="submit" class="btn btn--paper">Notify Me →</button>
     </form>
     <p class="order__note" id="formNote" role="status"></p>
 
@@ -328,20 +318,30 @@
 
 </main>
 
-<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER / COLOPHON ===== -->
 <footer class="footer">
-  <div class="footer__top">
-    <a href="#top" class="footer__logo">🧃 purejuicery</a>
-    <nav class="footer__links" aria-label="Footer">
-      <a href="#juices">Juices</a>
-      <a href="#promise">Promise</a>
-      <a href="#ingredients">Ingredients</a>
-      <a href="#order">Order</a>
-    </nav>
+  <div class="footer__grid">
+    <div class="footer__col">
+      <a href="#top" class="footer__logo">purejuicery</a>
+      <p>100% organic. Always pure.<br />Printed digitally, no preservatives.</p>
+    </div>
+    <div class="footer__col">
+      <p class="footer__head">Contents</p>
+      <a href="#juices">01 — Juices</a>
+      <a href="#promise">02 — Promise</a>
+      <a href="#ingredients">03 — Ingredients</a>
+      <a href="#order">04 — Order</a>
+    </div>
+    <div class="footer__col">
+      <p class="footer__head">Contact</p>
+      <a href="mailto:hello@purejuicery.my">hello@purejuicery.my</a>
+      <a href="https://wa.me/0000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <span>purejuicery.my</span>
+    </div>
   </div>
   <div class="footer__bottom">
-    <p>&copy; <span id="year"></span> purejuicery. 100% organic. Always pure.</p>
-    <p class="footer__credit">purejuicery.my</p>
+    <p>&copy; <span id="year"></span> purejuicery. All rights reserved.</p>
+    <p class="footer__credit">Vol. 01 — The Organic Issue</p>
   </div>
 </footer>
 
