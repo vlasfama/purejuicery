@@ -62,6 +62,42 @@
   window.addEventListener("scroll", revealVisible, { passive: true });
   window.addEventListener("resize", revealVisible);
 
+  // Floating WhatsApp chat widget
+  const wa = document.getElementById("wa");
+  const waFab = document.getElementById("waFab");
+  const waPop = document.getElementById("waPop");
+  const waClose = document.getElementById("waClose");
+  const waCta = document.getElementById("waCta");
+  if (wa && waFab && waPop) {
+    const setOpen = (open) => {
+      wa.classList.toggle("is-open", open);
+      waFab.setAttribute("aria-expanded", String(open));
+      waPop.setAttribute("aria-hidden", String(!open));
+    };
+    waFab.addEventListener("click", () => setOpen(!wa.classList.contains("is-open")));
+    if (waClose) {
+      waClose.addEventListener("click", () => {
+        setOpen(false);
+        try { sessionStorage.setItem("waDismissed", "1"); } catch (e) {}
+      });
+    }
+    if (waCta) waCta.addEventListener("click", () => setOpen(false));
+    // Close on Escape or outside click
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+    document.addEventListener("click", (e) => {
+      if (wa.classList.contains("is-open") && !wa.contains(e.target)) setOpen(false);
+    });
+    // Auto-open once per session as a gentle nudge
+    let dismissed = false;
+    try { dismissed = sessionStorage.getItem("waDismissed") === "1"; } catch (e) {}
+    if (!dismissed) {
+      setTimeout(() => {
+        if (!wa.classList.contains("is-open")) setOpen(true);
+        try { sessionStorage.setItem("waDismissed", "1"); } catch (e) {}
+      }, 6000);
+    }
+  }
+
   // Notify form (static site — no backend wired up yet)
   const form = document.getElementById("notifyForm");
   const note = document.getElementById("formNote");
